@@ -12,13 +12,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist s4studio/yii2-mailqueue "*"
+php composer.phar require --prefer-dist s4studio/yii2-mailqueue "dev-master"
 ```
 
 or add
 
 ```
-"s4studio/yii2-mailqueue": "*"
+"s4studio/yii2-mailqueue": "dev-master"
 ```
 
 to the require section of your `composer.json` file.
