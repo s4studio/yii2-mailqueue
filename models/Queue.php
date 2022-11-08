@@ -1,11 +1,11 @@
 <?php
 
-namespace nterms\mailqueue\models;
+namespace s4studio\mailqueue\models;
 
 use Yii;
 use yii\db\ActiveRecord;
-use nterms\mailqueue\MailQueue;
-use nterms\mailqueue\Message;
+use s4studio\mailqueue\MailQueue;
+use s4studio\mailqueue\Message;
 
 /**
  * This is the model class for table "{{%mail_queue}}".

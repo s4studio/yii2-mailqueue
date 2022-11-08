@@ -3,14 +3,15 @@
 /**
  * MailQueue.php
  * @author Saranga Abeykoon http://nterms.com
+ * @author Kawalec E. <e.kawalec@gmail.com>
  */
 
-namespace nterms\mailqueue;
+namespace s4studio\mailqueue;
 
 use Yii;
 use yii\swiftmailer\Mailer;
-use nterms\mailqueue\Message;
-use nterms\mailqueue\models\Queue;
+use s4studio\mailqueue\Message;
+use s4studio\mailqueue\models\Queue;
 
 /**
  * MailQueue is a sub class of [yii\switmailer\Mailer](https://github.com/yiisoft/yii2-swiftmailer/blob/master/Mailer.php)
@@ -22,7 +23,7 @@ use nterms\mailqueue\models\Queue;
  * 	'components' => [
  * 		...
  * 		'mailqueue' => [
- * 			'class' => 'nterms\mailqueue\MailQueue',
+ * 			'class' => 's4studio\mailqueue\MailQueue',
  *			'table' => '{{%mail_queue}}',
  *			'mailsPerRound' => 10,
  *			'maxAttempts' => 3,
@@ -42,7 +43,7 @@ use nterms\mailqueue\models\Queue;
  * @see http://www.yiiframework.com/doc-2.0/yii-swiftmailer-mailer.html
  * @see http://www.yiiframework.com/doc-2.0/ext-swiftmailer-index.html
  *
- * This extension replaces `yii\switmailer\Message` with `nterms\mailqueue\Message'
+ * This extension replaces `yii\switmailer\Message` with `s4studio\mailqueue\Message'
  * to enable queuing right from the message.
  *
  */
@@ -53,7 +54,7 @@ class MailQueue extends Mailer
 	/**
 	 * @var string message default class name.
 	 */
-	public $messageClass = 'nterms\mailqueue\Message';
+	public $messageClass = 's4studio\mailqueue\Message';
 
 	/**
 	 * @var string the name of the database table to store the mail queue.
@@ -106,7 +107,7 @@ class MailQueue extends Mailer
 				$item->sent_time = new \yii\db\Expression('NOW()');
 				$attributes[] = 'sent_time';
 			} catch (\Swift_IoException $exception) {
-				Yii::error($exception->getMessage(), 'nterms/yii2-mailqueue');
+				Yii::error($exception->getMessage(), 's4studio/yii2-mailqueue');
 				$success = false;
 			}
 			$item->attempts++;

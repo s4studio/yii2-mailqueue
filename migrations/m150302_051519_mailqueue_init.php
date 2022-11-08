@@ -2,7 +2,7 @@
 
 use yii\db\Schema;
 use yii\db\Migration;
-use nterms\mailqueue\MailQueue;
+use s4studio\mailqueue\MailQueue;
 
 /**
  * Initializes the db table for MailQueue

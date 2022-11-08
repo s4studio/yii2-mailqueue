@@ -6,7 +6,7 @@
  * @author Rochdi B. <rochdi80tn@gmail.com>
  */
 
-namespace nterms\mailqueue;
+namespace s4studio\mailqueue;
 
 use yii\base\Application;
 use yii\base\BootstrapInterface;
@@ -15,8 +15,9 @@ use yii\base\BootstrapInterface;
 /**
  * Class Bootstrap
  * 
- * @package nterms\mailqueue;
+ * @package s4studio\mailqueue;
  * @author Rochdi B. <rochdi80tn@gmail.com>
+ * @author Kawalec E. <e.kawalec@gmail.com>
  */
 class Bootstrap implements BootstrapInterface
 {
@@ -31,7 +32,7 @@ class Bootstrap implements BootstrapInterface
     {
       
         if ($app instanceof \yii\console\Application) {
-            $app->controllerMap['mailqueue'] = 'nterms\mailqueue\commands\MailQueueController';
+            $app->controllerMap['mailqueue'] = 's4studio\mailqueue\commands\MailQueueController';
         }
         
     }

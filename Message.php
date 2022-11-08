@@ -3,12 +3,13 @@
 /**
  * Message.php
  * @author Saranga Abeykoon http://nterms.com
+ * @author Kawalec E. <e.kawalec@gmail.com>
  */
 
-namespace nterms\mailqueue;
+namespace s4studio\mailqueue;
 
 use Yii;
-use nterms\mailqueue\models\Queue;
+use s4studio\mailqueue\models\Queue;
 
 /**
  * Extends `yii\swiftmailer\Message` to enable queuing.
